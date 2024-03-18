@@ -306,7 +306,18 @@ footer p {
     visibility: hidden;
   }
 
-  footer {
-    font-size: 12px;
+  .footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    width: 100%;
+  }
+
+  @media screen and (max-width: 600px) {
+    .footer {
+      font-size: 14px;
+      padding: 15px 0;
+    }
   }
 }
