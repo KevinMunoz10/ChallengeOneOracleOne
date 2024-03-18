@@ -83,7 +83,6 @@ function encriptar() {
     }
 }
 
-
 // Función para desencriptar el texto ingresado
 function desencriptar() {
     let texto = document.getElementById("texto").value;
@@ -94,7 +93,7 @@ function desencriptar() {
             return;
         }
         let textoDescifrado = desencriptarTexto(texto);
-        document.getElementById("texto_encriptado").textContent = textoDescifrado; // Mostramos el texto desencriptado en el div correspondiente
+        document.getElementById("textoEncriptado").value = textoDescifrado; // Mostramos el texto desencriptado en el textarea
         mostrarMensajeExito("Texto desencriptado con éxito");
         cambiarImagenEncriptado(false); // Cambia la imagen cuando el texto está desencriptado
     } else {
@@ -122,3 +121,5 @@ function copiarTexto() {
     }
 }
 
+// Bloquear el segundo textarea para que no se pueda escribir en él
+document.getElementById("textoEncriptado").readOnly = true;
