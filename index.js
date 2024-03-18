@@ -101,25 +101,26 @@ function desencriptar() {
     }
 }
 
-// Función para copiar el texto al portapapeles
+// Función para copiar el texto encriptado al portapapeles
 function copiarTexto() {
-    let texto = document.getElementById("texto").value;
+    let textoEncriptado = document.getElementById("textoEncriptado").value;
     let imagen = document.getElementById("imagen_caricatura");
 
-    if (texto.length !== 0) {
-        navigator.clipboard.writeText(texto)
+    if (textoEncriptado.length !== 0) {
+        navigator.clipboard.writeText(textoEncriptado)
             .then(() => {
-                mostrarMensajeExito("Texto copiado al portapapeles");
+                mostrarMensajeExito("Texto encriptado copiado al portapapeles");
                 imagen.src = "img/Copiar.png";
-                imagen.alt = "Imagen cuando el texto se copia al portapapeles";
+                imagen.alt = "Imagen cuando el texto encriptado se copia al portapapeles";
             })
             .catch((error) => {
-                mostrarMensajeError("No se pudo copiar el texto: " + error);
+                mostrarMensajeError("No se pudo copiar el texto encriptado: " + error);
             });
     } else {
-        mostrarMensajeError("No hay texto para copiar");
+        mostrarMensajeError("No hay texto encriptado para copiar");
     }
 }
+
 
 // Bloquear el segundo textarea para que no se pueda escribir en él
 document.getElementById("textoEncriptado").readOnly = true;
