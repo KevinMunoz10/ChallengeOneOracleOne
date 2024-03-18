@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encriptador - KEVIN MUÑOZ</title>
+    <!-- CSS only -->
+    <link rel="stylesheet" href=Estilos/reset.css />
+    <link rel="stylesheet" href=Estilos/styles.css />
+</head>
+
+<body>
+    <div class="container">
+        <div class="encriptar">
+            <textarea name="texto" class="texto" id="texto" cols="30" rows="10"
+                placeholder="Ingresa el texto aqui (solo minusculas y sin acentos)"></textarea>
+
+            <div class="terminos">
+                <p>
+                    SOLO MINUSCULAS Y SIN ACENTO POR FAVOR
+                </p>
+            </div>
+            <div class="botones">
+                <button class="btn-Encriptar" type="button" onclick="encriptrar()">ENCRIPTAR TEXTO</button>
+                <button class="btn-Desencriptar" type="button" onclick="desencriptrar()">DESENCRIPTAR TEXTO</button>
+            </div>
+        </div>
+        <div class="encriptado">
+            <img src="" alt="" id="imagen_caricatura">
+            <div class="mensaje_encriptado" id="mensaje_encriptado">
+                <h2 id="titulo_mensaje">NINGUN MENSAJE ENCONTRADO PARA ESTA TAREA</h2>
+                <p id="parrafo"> Ingrea el texto para la tarea que necesitas (Encriptar o Desencriptrar)</p>
+                <textarea name="mensaje" id="mensaje" cols="30" rows="10" class="mensaje"></textarea>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="script.js"></script>
+
+</html>
