@@ -12,7 +12,25 @@
   width: 40%;
   height: 60%;
   left: 15%;
-  top: 15%;
+  top: 5%;
+  border: none;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 250%;
+  text-align: center;
+  background-color: #9fa6c4;
+  border-radius: 24px;
+  box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.8);
+}
+
+.textoEncriptado {
+  position: absolute;
+  width: 70%;
+  height: 20%;
+  left: 15%;
+  top: 77%;
   border: none;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   font-style: italic;
@@ -43,7 +61,7 @@
   position: absolute;
   width: 80%;
   left: 15%;
-  top: 80%;
+  top: 75%;
 }
 
 .terminos p {
@@ -52,7 +70,7 @@
   font-weight: 400;
   font-size: 14px;
   line-height: 150%;
-  color: grey;
+  color: #495057;
   opacity: 0.8;
   flex: none;
   order: 1;
@@ -67,7 +85,11 @@
   position: absolute;
   width: 80%;
   left: 15%;
-  top: 85%;
+  top: 80%;
+}
+
+.botones button {
+  margin-right: 10px;
 }
 
 .btn-Encriptar {
@@ -76,7 +98,7 @@
   padding: 2%;
   gap: 8px;
   width: 15%;
-  background-color: cornflowerblue;
+  background-color: #052051;
   border-radius: 24px;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   font-size: 18px;
@@ -93,7 +115,7 @@
   padding: 2%;
   gap: 8%;
   width: 15%;
-  background-color: beige;
+  background-color: #757fb2;
   border: 1px solid #0a3871;
   border-radius: 24px;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
@@ -104,8 +126,24 @@
   color: black;
 }
 
+.btn-Copiar {
+  align-items: center;
+  justify-content: center;
+  padding: 2%;
+  gap: 8px;
+  width: 15%;
+  background-color: #495057;
+  border-radius: 24px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: 18px;
+  line-height: 19px;
+  text-align: center;
+  color: whitesmoke;
+}
+
 .btn-Desencriptar:hover,
-.btn-Encriptar:hover {
+.btn-Encriptar:hover,
+.btn-Copiar:hover {
   margin: 0.3%;
   width: 25%;
   padding: 2%;
@@ -173,6 +211,21 @@
   top: 5%;
 }
 
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background-color: #343a40;
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+}
+
+footer p {
+  margin: 0;
+  font-size: 14px;
+}
+
 /* RESPONSIVE */
 @media (max-width: 57.5em) {
   .container {
@@ -186,9 +239,16 @@
 
   .texto {
     width: 80%;
-    height: 60%;
+    height: 30%;
     left: 10%;
     top: 5%;
+  }
+
+  .textoEncriptado {
+    width: 100%;
+    height: 90%;
+    left: 1%;
+    top: -250%;
   }
 
   .terminos {
@@ -208,13 +268,15 @@
   }
 
   .btn-Encriptar,
-  .btn-Desencriptar {
+  .btn-Desencriptar,
+  .btn-Copiar {
     width: 50%;
     border-radius: 16px;
   }
 
   .btn-Encriptar:hover,
-  .btn-Desencriptar:hover {
+  .btn-Desencriptar:hover,
+  .btn-Copiar {
     margin: 0.3%;
     width: 47%;
     padding: 2%;
@@ -242,5 +304,9 @@
     top: 0;
     display: none;
     visibility: hidden;
+  }
+
+  footer {
+    font-size: 12px;
   }
 }
